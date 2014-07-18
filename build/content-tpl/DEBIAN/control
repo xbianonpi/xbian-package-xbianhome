@@ -1,0 +1,8 @@
+Origin: XBian
+Package: xbian-package-xbianhome
+Version: 1.0.1-1
+Section: system
+Priority:
+Architecture: armhf
+Maintainer: mk01 <development@xbian.org>
+Description: default user xbian home dir

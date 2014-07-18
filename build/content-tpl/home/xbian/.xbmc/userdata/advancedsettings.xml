@@ -1,0 +1,25 @@
+<advancedsettings>
+  <useddsfanart>false</useddsfanart>
+  <network>
+    <cachemembuffersize>20971520</cachemembuffersize>
+    <readbufferfactor>4.0</readbufferfactor>
+  </network>
+  <samba>
+    <clienttimeout>10</clienttimeout>
+  </samba>
+   <fanartres>720</fanartres>
+   <imageres>540</imageres>
+  <fullscreen>true</fullscreen>
+  <destroywindowcontrols>false</destroywindowcontrols>
+  <gui>
+    <nofliptimeout>1000</nofliptimeout>
+    <algorithmdirtyregions>1</algorithmdirtyregions>
+  </gui>
+  <libass>
+    <styleoverrides>
+      <style name="Shadow" value="0" />
+      <style name="Blur" value="0" />
+      <style name="BorderStyle" value="0" />
+    </styleoverrides>
+  </libass>
+</advancedsettings>
