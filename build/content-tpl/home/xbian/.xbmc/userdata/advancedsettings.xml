@@ -10,7 +10,6 @@
    <fanartres>720</fanartres>
    <imageres>540</imageres>
   <fullscreen>true</fullscreen>
-  <destroywindowcontrols>false</destroywindowcontrols>
   <gui>
     <nofliptimeout>1000</nofliptimeout>
     <algorithmdirtyregions>1</algorithmdirtyregions>
