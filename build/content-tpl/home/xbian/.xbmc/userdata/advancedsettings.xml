@@ -1,14 +1,9 @@
 <advancedsettings>
-  <useddsfanart>false</useddsfanart>
   <network>
-    <cachemembuffersize>20971520</cachemembuffersize>
     <readbufferfactor>4.0</readbufferfactor>
   </network>
-  <samba>
-    <clienttimeout>10</clienttimeout>
-  </samba>
-   <fanartres>720</fanartres>
-   <imageres>540</imageres>
+  <fanartres>720</fanartres>
+  <imageres>540</imageres>
   <fullscreen>true</fullscreen>
   <gui>
     <nofliptimeout>1000</nofliptimeout>
