@@ -102,4 +102,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-[ -e /home/xbian/.xbian-config-start.sh ] && . /home/xbian/.xbian-config-start.sh
+if [ -z "${STY}" ] && [ -z "${TMUX}" ] \
+  && [ -e /home/xbian/.xbian-config-start.sh ]; then
+    . /home/xbian/.xbian-config-start.sh
+fi
