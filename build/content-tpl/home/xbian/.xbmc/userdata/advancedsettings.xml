@@ -4,11 +4,6 @@
   </network>
   <fanartres>720</fanartres>
   <imageres>540</imageres>
-  <fullscreen>true</fullscreen>
-  <gui>
-    <nofliptimeout>1000</nofliptimeout>
-    <algorithmdirtyregions>1</algorithmdirtyregions>
-  </gui>
   <libass>
     <styleoverrides>
       <style name="Shadow" value="0" />
