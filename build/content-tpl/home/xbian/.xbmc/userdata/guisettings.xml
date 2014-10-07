@@ -224,20 +224,11 @@
         <fontheight>36</fontheight>
         <importcsv></importcsv>
     </karaoke>
-    <locale>
-        <audiolanguage>original</audiolanguage>
-        <charset>DEFAULT</charset>
-        <country>USA (24h)</country>
-        <language>english</language>
-        <subtitlelanguage>original</subtitlelanguage>
-        <timezone>America/New_York</timezone>
-        <timezonecountry>United States</timezonecountry>
-    </locale>
     <lookandfeel>
         <enablerssfeeds default=false>false</enablerssfeeds>
         <font>Default</font>
         <rssedit></rssedit>
-        <skin>skin.confluence</skin>
+        <skin>skin.confluenceforxbian</skin>
         <skincolors>SKINDEFAULT</skincolors>
         <skinsettings></skinsettings>
         <skintheme>SKINDEFAULT</skintheme>
@@ -282,25 +273,6 @@
         <replaygaintype>1</replaygaintype>
         <visualisation></visualisation>
     </musicplayer>
-    <network>
-        <assignment>1</assignment>
-        <bandwidth>0</bandwidth>
-        <dns>0.0.0.0</dns>
-        <dnssuffix></dnssuffix>
-        <enc>0</enc>
-        <essid>0.0.0.0</essid>
-        <gateway>0.0.0.0</gateway>
-        <httpproxypassword></httpproxypassword>
-        <httpproxyport>8080</httpproxyport>
-        <httpproxyserver></httpproxyserver>
-        <httpproxyusername></httpproxyusername>
-        <interface></interface>
-        <ipaddress>0.0.0.0</ipaddress>
-        <key>0.0.0.0</key>
-        <save></save>
-        <subnet>255.255.255.0</subnet>
-        <usehttpproxy>false</usehttpproxy>
-    </network>
     <pictures>
         <displayresolution>14</displayresolution>
         <generatethumbs>true</generatethumbs>
@@ -376,14 +348,6 @@
         <usedimonpause>true</usedimonpause>
         <usemusicvisinstead>true</usemusicvisinstead>
     </screensaver>
-    <scrobbler>
-        <lastfmpass></lastfmpass>
-        <lastfmsubmit>false</lastfmsubmit>
-        <lastfmusername></lastfmusername>
-        <librefmpass></librefmpass>
-        <librefmsubmit>false</librefmsubmit>
-        <librefmusername></librefmusername>
-    </scrobbler>
     <services>
         <airplay>false</airplay>
         <airplaypassword></airplaypassword>
@@ -456,62 +420,9 @@
         <teletextscale>true</teletextscale>
         <usedisplayasclock>false</usedisplayasclock>
     </videoplayer>
-    <videoscreen>
-        <guicalibration></guicalibration>
-        <haslcd>false</haslcd>
-        <resolution>0</resolution>
-        <screenmode>DESKTOP</screenmode>
-        <vsync>3</vsync>
-    </videoscreen>
     <weather>
         <addon>weather.wunderground</addon>
         <addonsettings></addonsettings>
         <currentlocation>1</currentlocation>
     </weather>
-    <window>
-        <height>480</height>
-        <width>720</width>
-    </window>
-    <skinsettings>
-        <setting type="bool" name="skin.confluence.Use_Startup_Playlist">false</setting>
-        <setting type="bool" name="skin.confluence.UseCustomBackground">false</setting>
-        <setting type="bool" name="skin.confluence.HideBackGroundFanart">false</setting>
-        <setting type="bool" name="skin.confluence.ShowBackgroundVideo">false</setting>
-        <setting type="bool" name="skin.confluence.ShowBackgroundVis">false</setting>
-        <setting type="bool" name="skin.confluence.HomepageHideRecentlyAddedVideo">false</setting>
-        <setting type="bool" name="skin.confluence.HomepageHideRecentlyAddedAlbums">false</setting>
-        <setting type="bool" name="skin.confluence.homepageWeatherinfo">false</setting>
-        <setting type="bool" name="skin.confluence.homepageMusicinfo">false</setting>
-        <setting type="bool" name="skin.confluence.homepageVideoinfo">false</setting>
-        <setting type="bool" name="skin.confluence.HomeMenuNoMovieButton">false</setting>
-        <setting type="bool" name="skin.confluence.HomeMenuNoTVShowButton">false</setting>
-        <setting type="bool" name="skin.confluence.HomeMenuNoWeatherButton">false</setting>
-        <setting type="bool" name="skin.confluence.HomeMenuNoPicturesButton">false</setting>
-        <setting type="bool" name="skin.confluence.HomeMenuNoVideosButton">false</setting>
-        <setting type="bool" name="skin.confluence.HomeMenuNoMusicButton">false</setting>
-        <setting type="bool" name="skin.confluence.HomeMenuNoProgramsButton">false</setting>
-        <setting type="bool" name="skin.confluence.AutoScroll">false</setting>
-        <setting type="bool" name="skin.confluence.FirstTimeRun">true</setting>
-        <setting type="string" name="skin.confluence.CustomBackgroundPath"></setting>
-        <setting type="string" name="skin.confluence.HomeVideosButton1"></setting>
-        <setting type="string" name="skin.confluence.HomeVideosButton2"></setting>
-        <setting type="string" name="skin.confluence.HomeVideosButton3"></setting>
-        <setting type="string" name="skin.confluence.HomeVideosButton4"></setting>
-        <setting type="string" name="skin.confluence.HomeVideosButton5"></setting>
-        <setting type="string" name="skin.confluence.HomeMusicButton1"></setting>
-        <setting type="string" name="skin.confluence.HomeMusicButton2"></setting>
-        <setting type="string" name="skin.confluence.HomeMusicButton3"></setting>
-        <setting type="string" name="skin.confluence.HomeMusicButton4"></setting>
-        <setting type="string" name="skin.confluence.HomeMusicButton5"></setting>
-        <setting type="string" name="skin.confluence.HomePictureButton1"></setting>
-        <setting type="string" name="skin.confluence.HomePictureButton2"></setting>
-        <setting type="string" name="skin.confluence.HomePictureButton3"></setting>
-        <setting type="string" name="skin.confluence.HomePictureButton4"></setting>
-        <setting type="string" name="skin.confluence.HomePictureButton5"></setting>
-        <setting type="string" name="skin.confluence.HomeProgramButton1"></setting>
-        <setting type="string" name="skin.confluence.HomeProgramButton2"></setting>
-        <setting type="string" name="skin.confluence.HomeProgramButton3"></setting>
-        <setting type="string" name="skin.confluence.HomeProgramButton4"></setting>
-        <setting type="string" name="skin.confluence.HomeProgramButton5"></setting>
-    </skinsettings>
 </settings>
