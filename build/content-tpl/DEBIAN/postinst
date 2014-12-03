@@ -9,8 +9,8 @@ if [[ $1 == "configure" ]]; then
         fi
     fi
 
-    grep -wq input /etc/group || groupadd input || :
-    grep -wq audio /etc/group || groupadd audio || :
+    grep -wq input /etc/group || groupadd --system input || :
+    grep -wq audio /etc/group || groupadd --system audio || :
     grep -wq xbian /etc/passwd || useradd -G audio,video,users,input,sudo -m -p paI8KFtCOiEM6 -s /bin/bash -d /home/xbian xbian 2>/dev/null
 
     if [ -d /home/xbian/.xbmc.preserve ]; then
