@@ -1,3 +1,3 @@
 config_wrapper=build.package
 config_source_type=raw
-config_deb_version=1.0.5
+config_deb_version=1.0.6
