@@ -9,10 +9,16 @@ if [[ $1 == "configure" ]]; then
         fi
     fi
 
+    XBIANUSERADD=0
     grep -wq input /etc/group || groupadd --system input || :
     grep -wq audio /etc/group || groupadd --system audio || :
     grep -wq cdrom /etc/group || groupadd --system cdrom || :
-    grep -wq xbian /etc/passwd || useradd -G cdrom,audio,video,users,input,sudo -m -p paI8KFtCOiEM6 -s /bin/bash -d /home/xbian xbian 2>/dev/null
+    grep -wq xbian /etc/passwd || XBIANUSERADD=1
+
+    if [ $XBIANUSERADD -eq 1 ]; then
+        useradd -G cdrom,audio,video,users,input,sudo -m -s /bin/bash -d /home/xbian xbian 2>/dev/null
+        echo "xbian:raspberry" | chpasswd
+    fi
 
     if [ -d /home/xbian/.xbmc.preserve ]; then
         while test -d /home/xbian/.xbmc; do rm -fr /home/xbian/.xbmc; sleep 1; done
