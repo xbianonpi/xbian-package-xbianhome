@@ -18,6 +18,10 @@ if [[ $1 == "configure" ]]; then
     if [ $XBIANUSERADD -eq 1 ]; then
         useradd -G cdrom,audio,video,users,input,sudo -m -s /bin/bash -d /home/xbian xbian 2>/dev/null
         echo "xbian:raspberry" | chpasswd
+    else
+        # This could trigger a passchange on each update on md4 systems
+        # but that doesn't matter much. The final result will be the same.
+        grep -wq "xbian:paI8KFtCOiEM6" /etc/shadow && echo "xbian:raspberry" | chpasswd
     fi
 
     if [ -d /home/xbian/.xbmc.preserve ]; then
