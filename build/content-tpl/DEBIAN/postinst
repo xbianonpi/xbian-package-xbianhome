@@ -2,6 +2,8 @@
 
 if [[ $1 == "configure" ]]; then
 
+    grps="input audio cdrom video"
+
     if [ "$(findmnt -o FSTYPE -n /)" = btrfs ]; then
         if [ -x /usr/sbin/btrfs-auto-snapshot ]; then
             btrfs-auto-snapshot list | grep -wq home/@ || { btrfs-auto-snapshot createvol home; btrfs-auto-snapshot createvol home/@; }
@@ -9,20 +11,20 @@ if [[ $1 == "configure" ]]; then
         fi
     fi
 
-    XBIANUSERADD=0
-    grep -wq input /etc/group || groupadd --system input || :
-    grep -wq audio /etc/group || groupadd --system audio || :
-    grep -wq cdrom /etc/group || groupadd --system cdrom || :
-    grep -wq xbian /etc/passwd || XBIANUSERADD=1
-
-    if [ $XBIANUSERADD -eq 1 ]; then
-        useradd -G cdrom,audio,video,users,input,sudo -m -s /bin/bash -d /home/xbian xbian 2>/dev/null
+    if ! grep -wq xbian /etc/passwd; then
+        useradd -G users,sudo -m -s /bin/bash -d /home/xbian xbian 2>/dev/null
         echo "xbian:raspberry" | chpasswd
     else
         # This could trigger a passchange on each update on md4 systems
         # but that doesn't matter much. The final result will be the same.
         grep -wq "xbian:paI8KFtCOiEM6" /etc/shadow && echo "xbian:raspberry" | chpasswd
     fi
+
+    # add groups if not exist, add xbian user to it
+    for g in $grps; do
+        grep -wq $g /etc/group || groupadd --system $g || :
+        usermod -G $g -a xbian || :
+    done
 
     if [ -d /home/xbian/.xbmc.preserve ]; then
         while test -d /home/xbian/.xbmc; do rm -fr /home/xbian/.xbmc; sleep 1; done
