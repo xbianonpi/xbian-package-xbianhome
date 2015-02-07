@@ -30,13 +30,11 @@ if [[ $1 == "configure" ]]; then
         while test -d /home/xbian/.xbmc; do rm -fr /home/xbian/.xbmc; sleep 1; done
         mv /home/xbian/.xbmc.preserve /home/xbian/.xbmc
     fi
+    
+    [ ! -f /home/xbian/.bash_logout ] && cp /etc/skel/.bash_logout /home/xbian
+    [ ! -f /home/xbian/.bashrc ] && cp /etc/skel/.bashrc /home/xbian
 
     [ -d /home/xbian ] && chown -R xbian:xbian /home/xbian >/dev/null 2>&1
-
-elif [ $1 = triggered ]; then
-
-    :
-
 fi
 
 exit 0
