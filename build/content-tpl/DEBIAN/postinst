@@ -26,35 +26,10 @@ if [[ $1 == "configure" ]]; then
         usermod -G $g -a xbian || :
     done
 
-
-    if [ -d /home/xbian/.kodi.preserve ]; then
-        while test -d /home/xbian/.kodi; do
-            rm -fr /home/xbian/.kodi
-            sleep 1
-        done
-
-        mv /home/xbian/.kodi.preserve /home/xbian/.kodi
-        # Restore symlink from .xbmc
-        ln -s /home/xbian/.kodi /home/xbian/.xbmc
-    else
-        [ -d /home/xbian/.kodi ] && rm -fr /home/xbian/.kodi
-        mv /home/xbian/.xbmc /home/xbian/.kodi
-        # Restore symlink from .xbmc to .kodi
-        ln -s /home/xbian/.kodi /home/xbian/.xbmc
-    fi
-
-    # ... but we still support Gotham
     if [ -d /home/xbian/.xbmc.preserve ]; then
-        # Symlink to .kodi?
-        if [ ! -L /home/xbian/.xbmc ]; then
-            while test -d /home/xbian/.xbmc; do rm -fr /home/xbian/.xbmc; sleep 1; done
-            mv /home/xbian/.xbmc.preserve /home/xbian/.xbmc
-        else
-            # Cleanup old cruft
-            rm -fr /home/xbian/.xbmc.preserve
-        fi
+        while test -d /home/xbian/.xbmc; do rm -fr /home/xbian/.xbmc; sleep 1; done
+        mv /home/xbian/.xbmc.preserve /home/xbian/.xbmc
     fi
-
     
     [ ! -f /home/xbian/.bash_logout ] && cp /etc/skel/.bash_logout /home/xbian
     [ ! -f /home/xbian/.bashrc ] && cp /etc/skel/.bashrc /home/xbian

@@ -5,20 +5,8 @@ if [ $1 == "install" -o $1 == "upgrade" ]; then
     [ -e /etc/init.d/xbmc ] && service xbmc stop > /dev/null 2>&1
     [ -e /etc/init/xbmc ] && stop -q xbmc > /dev/null 2>&1
 
-    if [ -d /home/xbian/.kodi.preserve ]; then
-        mv -f /home/xbian/.kodi.preserve/* /home/xbian/.kodi/
-        rm -fr /home/xbian/.kodi.preserve
-    fi
-    if [ -d /home/xbian/.kodi ]; then
-        mv /home/xbian/.kodi /home/xbian/.kodi.preserve
-        if [ -L /home/xbian/.xbmc ]; then
-            rm .xbmc
-        fi
-    fi
-
-    # ... but we still support Gotham
     [ -d /home/xbian/.xbmc.preserve ] && mv -f /home/xbian/.xbmc.preserve/* /home/xbian/.xbmc/; rm -fr /home/xbian/.xbmc.preserve
-    [ -d /home/xbian/.xbmc -a ! -L /home/xbian/.xbmc ] && mv /home/xbian/.xbmc /home/xbian/.xbmc.preserve
+    [ ! -d /home/xbian/.xbmc ] || mv /home/xbian/.xbmc /home/xbian/.xbmc.preserve
 
 fi
 
