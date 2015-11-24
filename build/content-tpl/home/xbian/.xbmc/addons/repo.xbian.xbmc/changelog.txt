@@ -1,5 +1,0 @@
-1.0.3
-location change
-
-1.0.1
-initial release
