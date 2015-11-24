@@ -228,7 +228,6 @@
         <enablerssfeeds default=false>false</enablerssfeeds>
         <font>Default</font>
         <rssedit></rssedit>
-        <skin>skin.confluenceforxbian</skin>
         <skincolors>SKINDEFAULT</skincolors>
         <skinsettings></skinsettings>
         <skintheme>SKINDEFAULT</skintheme>
