@@ -26,9 +26,9 @@ if [[ $1 == "configure" ]]; then
         usermod -G $g -a xbian || :
     done
 
-    if [ -d /home/xbian/.xbmc.preserve ]; then
-        while test -d /home/xbian/.xbmc; do rm -fr /home/xbian/.xbmc; sleep 1; done
-        mv /home/xbian/.xbmc.preserve /home/xbian/.xbmc
+    if [ -d /home/xbian/.kodi.preserve ]; then
+        while test -d /home/xbian/.kodi; do rm -fr /home/xbian/.kodi; sleep 1; done
+        mv /home/xbian/.kodi.preserve /home/xbian/.kodi
     fi
     
     [ ! -f /home/xbian/.bash_logout ] && cp /etc/skel/.bash_logout /home/xbian
