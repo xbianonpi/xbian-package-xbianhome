@@ -2,7 +2,7 @@
     <files>
 	<source>
 		<name>SuperRepo.org Virtual Disk</name>
-		<path pathversion="1">http://mirrors.superrepo.org/addons/gotham/</path>
+		<path pathversion="1">http://mirrors.superrepo.org/addons/helix</path>
 	</source>
 	<source>
 		<name>Root filesystem</name>
