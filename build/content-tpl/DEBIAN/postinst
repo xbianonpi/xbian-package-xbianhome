@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# exit if there is only .xbmc, it is not symlink and there is no .kodi
+if [ -d /home/xbian/.xbmc -a ! -h /home/xbian/.xbmc -a ! -e /home/xbian/.kodi ]; then
+    exit 0
+fi
+
 if [[ $1 == "configure" ]]; then
 
     grps="input audio cdrom video"
