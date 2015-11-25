@@ -7,8 +7,8 @@ fi
 
 if [ $1 == "install" -o $1 == "upgrade" ]; then
 
-    [ -e /etc/init.d/xbmc ] && service xbmc stop > /dev/null 2>&1
-    [ -e /etc/init/xbmc ] && stop -q xbmc > /dev/null 2>&1
+#    [ -e /etc/init.d/xbmc ] && service xbmc stop > /dev/null 2>&1
+#    [ -e /etc/init/xbmc.conf ] && stop -q xbmc > /dev/null 2>&1
 
     [ -d /home/xbian/.kodi.preserve ] && mv -f /home/xbian/.kodi.preserve/* /home/xbian/.kodi/; rm -fr /home/xbian/.kodi.preserve
     [ ! -d /home/xbian/.kodi ] || mv /home/xbian/.kodi /home/xbian/.kodi.preserve
