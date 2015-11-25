@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ -d /home/xbian/.kodi -a -d /home/xbian/.xbmc -a ! -h /home/xbian/.kodi -a ! -h /home/xbian/.xbmc ]; then
+    mv /home/xbian/.xbmc /home/xbian/.xbmc.$(mktemp -u | awk -F'.' '{print $2}') || exit 1
+    ln -s /home/xbian/.kodi /home/xbian/.xbmc
+fi
+
 if [ $1 == "install" -o $1 == "upgrade" ]; then
 
     [ -e /etc/init.d/xbmc ] && service xbmc stop > /dev/null 2>&1
