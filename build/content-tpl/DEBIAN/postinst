@@ -7,7 +7,7 @@ fi
 
 if [[ $1 == "configure" ]]; then
 
-    grps="input audio cdrom video render"
+    grps="input audio cdrom video render bluetooth"
 
     if [ "$(findmnt -o FSTYPE -n /)" = btrfs ]; then
         if [ -x /usr/sbin/btrfs-auto-snapshot ]; then
