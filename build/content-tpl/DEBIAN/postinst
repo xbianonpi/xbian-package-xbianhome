@@ -19,6 +19,9 @@ if [[ $1 == "configure" ]]; then
     if ! grep -wq xbian /etc/passwd; then
         useradd -G users,sudo -m -s /bin/bash -d /home/xbian xbian 2>/dev/null
         echo "xbian:raspberry" | chpasswd
+        # Set last password change to fictitious date in the past to be
+        # able to reliably detect a password change
+        chage -i -d 2011-11-11 xbian
         # During image build, useradd does not copy .profile from /etc/skel
         # folder. Now idea why, so let us copy file manually now
         [ -f /home/xbian/.profile ] || { cp -a /etc/skel/.profile /home/xbian/; chown xbian:xbian /home/xbian/.profile; }
