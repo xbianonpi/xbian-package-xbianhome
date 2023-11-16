@@ -3,6 +3,6 @@ Package: xbian-package-xbianhome
 Version: __VERSION__
 Section: system
 Priority:
-Architecture: armhf
+Architecture: all
 Maintainer: mk01 <development@xbian.org>
 Description: default user xbian home dir
